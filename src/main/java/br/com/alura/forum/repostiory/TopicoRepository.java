@@ -1,7 +1,11 @@
 package br.com.alura.forum.repostiory;
 
+import br.com.alura.forum.modelo.Topico;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TopicoRepostiory extends JpaRepository {
+import java.util.List;
 
+public interface TopicoRepository extends JpaRepository <Topico, Long>{
+
+    List<Topico> findByCursoNome(String nomeCurso);
 }
